@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&display=swap');
+
+:root {
+    /* Основная палитра */
+    --cute-pink: #ff8fab;
+    --cute-pink-light: #ffb3c6;
+    --cute-purple: #cdb4db;
+    --cute-lavender: #e7c6ff;
+    --cute-peach: #ffc8dd;
+    --cute-background: #fff0f6;
+    --cute-text: #5c3a4d;
+    --cute-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+
+    /* Переопределяем Bootstrap-переменные */
+    --bs-body-bg: var(--cute-background);
+    --bs-body-color: var(--cute-text);
+    --bs-primary: var(--cute-pink);
+    --bs-primary-rgb: 255, 143, 171;
+    --bs-danger: #ff6b81;
+    --bs-danger-rgb: 255, 107, 129;
+    --bs-border-radius: 1rem;
+    --bs-border-radius-lg: 1.5rem;
+    --bs-border-radius-sm: 0.75rem;
+    --bs-font-sans-serif: 'Comfortaa', 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Заголовки – рукописный шрифт */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Pacifico', 'Comfortaa', cursive;
+    font-weight: 400;
+    color: #d6336c;
+}
+
+/* Фоновый узор (сердечки через градиент) */
+body {
+    background-image:
+            radial-gradient(circle at 20% 30%, rgba(255, 143, 171, 0.15) 0%, transparent 25%),
+            radial-gradient(circle at 80% 70%, rgba(205, 180, 219, 0.2) 0%, transparent 30%),
+            linear-gradient(135deg, #fff0f6 0%, #ffe3ed 100%);
+    background-attachment: fixed;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: var(--bs-border-radius);
+    box-shadow: var(--cute-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(4px);
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 143, 171, 0.3);
+}
+
+/* Кнопки */
+.btn {
+    border-radius: 2rem;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.btn-primary {
+    background: linear-gradient(45deg, #ff8fab, #ff6b81);
+    border: none;
+    box-shadow: 0 2px 8px rgba(255, 107, 129, 0.3);
+}
+.btn-primary:hover {
+    background: linear-gradient(45deg, #ff6b81, #ff8fab);
+    box-shadow: 0 4px 12px rgba(255, 107, 129, 0.5);
+}
+.btn-danger {
+    background: linear-gradient(45deg, #ff6b81, #f43b5e);
+    border: none;
+}
+.btn-outline-secondary {
+    border-radius: 2rem;
+    color: #d6336c;
+    border-color: #ffb3c6;
+}
+.btn-outline-secondary:hover {
+    background-color: #ffb3c6;
+    color: white;
+    border-color: #ffb3c6;
+}
+
+/* Навигация */
+.navbar {
+    background: linear-gradient(45deg, #ff8fab, #cdb4db) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.nav-link {
+    color: #fff !important;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s;
+}
+.nav-link:hover,
+.nav-link.router-link-active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Табы категорий */
+.nav-tabs {
+    border-bottom: none;
+    flex-wrap: wrap;          /* Разрешаем перенос на новую строку */
+    padding-bottom: 0.5rem;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: 0.5rem;    /* Отступ между рядами */
+}
+
+.nav-tabs .nav-link {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    border-radius: 2rem;      /* Скругляем все углы */
+    color: #a44a62 !important;
+    margin-right: 0.5rem;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    white-space: nowrap;      /* Каждый таб в одну строку */
+    transition: all 0.2s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #fff;
+    color: #d6336c !important;
+    box-shadow: 0 0 8px rgba(255, 143, 171, 0.3);
+}
+
+/* Формы */
+.form-control,
+.form-select {
+    border-radius: 1.5rem;
+    border: 2px solid #ffd6e5;
+    padding: 0.6rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.form-control:focus,
+.form-select:focus {
+    border-color: #ff8fab;
+    box-shadow: 0 0 0 0.25rem rgba(255, 143, 171, 0.25);
+}
+
+/* Списки */
+.list-group-item {
+    border: none;
+    border-radius: 1rem !important;
+    margin-bottom: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(255, 143, 171, 0.15);
+}
+
+/* Оповещения */
+.alert {
+    border-radius: 1rem;
+    border: none;
+}
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.alert-info {
+    background-color: #e7c6ff;
+    color: #4a2b5c;
+}
+
+/* Декоративные сердечки на фоне (псевдоэлементы) */
+body::before {
+    content: '❤';
+    position: fixed;
+    top: 5%;
+    left: 3%;
+    font-size: 2.5rem;
+    opacity: 0.2;
+    color: #ff8fab;
+    pointer-events: none;
+    animation: floatHeart 3s ease-in-out infinite;
+}
+body::after {
+    content: '❤';
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+    font-size: 3rem;
+    opacity: 0.15;
+    color: #cdb4db;
+    pointer-events: none;
+    animation: floatHeart 4s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.add-man-intro{
+    font-style: italic;
+    font-size: 12px;
+}
+/* Ссылки-кнопки */
+.btn-link {
+    color: #d6336c;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease;
+}
+.btn-link:hover {
+    background-color: rgba(255, 143, 171, 0.15);
+    color: #d6336c;
+    text-decoration: none;
+}
+
+/* Анимация выделения при нажатии "Обидеться" */
+.flash-highlight {
+    animation: flashHighlight 0.6s ease-in-out;
+}
+
+@keyframes flashHighlight {
+    0% {
+        background-color: #ffe3e3;
+        box-shadow: 0 0 15px rgba(255, 107, 129, 0.7);
+        transform: scale(1.02);
+    }
+    50% {
+        background-color: #ffc2c2;
+        box-shadow: 0 0 10px rgba(255, 107, 129, 0.5);
+        transform: scale(1.01);
+    }
+    100% {
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(255, 143, 171, 0.2);
+        transform: scale(1);
+    }
+}
