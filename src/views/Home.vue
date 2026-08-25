@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-4">
+    <h2>Не будь злопамятной, записывай!</h2>
     <!-- Кнопка установки PWA -->
     <div v-if="installPrompt && !isStandalone" class="mb-4 text-center">
       <button class="btn btn-primary" @click="installApp">
