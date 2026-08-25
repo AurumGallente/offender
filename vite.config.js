@@ -26,13 +26,13 @@ export default defineConfig({
                 start_url: '/',
                 icons: [
                     {
-                        src: '/icons/pwa-192x192.png',
+                        src: 'icons/pwa-192x192.png',
                         sizes: '192x192',
                         type: 'image/png',
                         purpose: 'any'
                     },
                     {
-                        src: '/icons/pwa-512x512.png',
+                        src: 'icons/pwa-512x512.png',
                         sizes: '512x512',
                         type: 'image/png',
                         purpose: 'any'
@@ -44,7 +44,7 @@ export default defineConfig({
                         purpose: 'maskable'
                     },
                     {
-                        src: '/icons/maskable-512.png',
+                        src: 'icons/maskable-512.png',
                         sizes: '512x512',
                         type: 'image/png',
                         purpose: 'maskable'
@@ -52,13 +52,13 @@ export default defineConfig({
                 ],
                 screenshots: [
                     {
-                        src: '/screenshots/desktop.jpg',
+                        src: 'screenshots/desktop.jpg',
                         sizes: '1319x823',
                         type: 'image/jpeg',
                         form_factor: 'wide'
                     },
                     {
-                        src: '/screenshots/mobile.jpg',
+                        src: 'screenshots/mobile.jpg',
                         sizes: '378x668',
                         type: 'image/jpeg',
                         form_factor: 'narrow'
